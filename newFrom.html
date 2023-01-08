@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form {
+            display: grid;
+            gap: 10px;
+        }
+        #form input, button {
+            padding: var(--default-padding);
+            outline: none;
+            font-size: 15px;
+            border: 1px solid #cccccc;
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form id = "form" >
+        <input id="first" name="firstNumber" placeholder="First Number" required type="number">
+        <input id="second" name="secondNumber" placeholder="Second Number" required type="number">
+        <button type="submit">submit</button>
+
+        
+    </form>
+
+    <div id="result"></div>
+
+
+    <script>
+
+    let num1;
+    let num2;
+    let sum,diff,num1Mess,num2Mess;
+    let number = [];
+    let result = document.getElementById('result');
+    let formElem = document.getElementById('form');
+    let inputs = document.getElementsByTagName('input');
+    number = document.getElementsByTagName('input');
+    let inputArr = [...inputs];
+    inputArr.forEach((input) => {
+        input.addEventListener('change', (ev) =>{
+            switch(ev.target.name){
+                case 'firstNumber':
+                     ev.target.classList.add('dirty');
+                    num1 = Number(ev.target?.value);
+                    break;
+                case 'secondNumber':
+                     ev.target.classList.add('dirty');
+                    num2 = Number(ev.target?.value);
+                    break;
+            }
+
+        })
+    })
+
+    formElem.addEventListener('submit',(e) => {
+        e.preventDefault();
+        sum = num1+num2;
+        diff=num1-num2;
+         if(num1%2==0){
+             num1Mess = "even";
+         }
+         else{
+             num1Mess == "odd";
+         }
+
+         if(num2%2==0){
+             num2Mess =  "even";
+         }
+         else{
+              num2Mess = "odd";
+         }
+         
+        formElem.reset();
+        result.innerHTML =  `<div id="student-card">
+                    <span class="add">
+                       sum is : ${sum} <br>
+                    </span>
+                    <span class="sub">
+                       sub is : ${diff} <br>
+                    </span>
+                    <span class="odd_eve">
+                       ${num1}: ${num1Mess} <br> ${num2}: ${num2Mess}
+                    </span>
+                </div>`
+    })
+   
+</Script>
+    
+</body>
+</html>

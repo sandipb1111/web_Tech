@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Input form</title>
+    <style>
+      .palindrome {
+        color: green;
+      }
+
+      .not-palindrome {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="form">
+      <input type="number" name="num1" id="num1" />
+      <input type="number" name="num2" id="num2" />
+
+      <button type="submit" id="submit">View Results</button>
+    </form>
+    <fieldset>
+      <legend>Palindrome Checker</legend>
+      <input type="text" name="text" id="inputText" />
+      <div class="container">
+        <p id="palResult"></p>
+      </div>
+    </fieldset>
+
+    <!-- <p id="sum"></p>
+    <p id="diff"></p>
+    <p id="num1"></p>
+    <p id="num2"></p> -->
+
+    <div id="results"></div>
+
+
+    <fieldset>
+      <legend>String Methods</legend>
+      <div id="result1"></div>
+
+    </fieldset>
+
+
+
+    <script>
+      let formElem = document.getElementById("form");
+      let resultElem = document.getElementById("results");
+      let submitBtn = document.getElementById("submit");
+      let inputText = document.getElementById("inputText");
+      let palindromeResult = document.getElementById("palResult");
+      let checkPalindrome = (input) => {
+        console.log(input);
+      };
+      inputText.addEventListener("keyup", (e) => {
+        let inputText = e.target.value;
+        let inputTextArr = inputText.split("");
+        let reversedText = "";
+        let midLetter = inputTextArr[inputTextArr.length / 2];
+
+        console.log(midLetter);
+
+        for (let i = inputTextArr.length - 1; i >= 0; i--) {
+          reversedText += inputTextArr[i];
+
+          // populate dom
+          palindromeResult.innerHTML = reversedText;
+        }
+        if (inputText == reversedText) {
+          palindromeResult.classList = "palindrome";
+          console.log("palindrome");
+        } else {
+          console.log("not palindrome");
+          palindromeResult.classList = "not-palindrome";
+        }
+      });
+
+      let generateHTML = (e) => {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        e.preventDefault();
+        let sum = parseInt(num1) + parseInt(num2);
+        let diff = num1 - num2;
+        let oddOrEven = {
+          num1: num1 % 2 != 0 ? "odd" : "even",
+          num2: num2 % 2 == 0 ? "even" : "odd",
+        };
+
+        let sumResultElem = `<p>Sum : ${sum}</p>`;
+        let diffResultElem = `<p>Diff : ${diff}</p>`;
+        console.log(sum);
+
+        resultElem.innerHTML = `
+            <p>Sum : ${sum} </p>
+            <p>Diff : ${diff} </p>
+            <p>${num1} : ${oddOrEven.num1} </p>
+            <p>${num2} : ${oddOrEven.num2} </p>
+
+        `;
+      };
+
+      formElem.addEventListener("submit", generateHTML);
+      // document.getElementById("sum").innerHtml = sumResultElem;
+      // document.getElementById("diff").innerHtml = diffResultElem;
+      // document.getElementById("num1").innerHtml = sumResultElem;
+      // document.getElementById("sum").innerHtml = sumResultElem;
+
+       
+      let a = "Ram";
+      console.log(a);
+      console.log(a.length);
+      console.log(a.split(''));
+      console.log(a.startsWith('Ra'));
+
+      let arr=[];
+      arr.push('Ram');
+      console.log(arr);
+      arr=[...arr,'Shyam'];
+      console.log(arr);
+      arr.pop();
+      console.log(arr);
+      [1,2,3,4,5].map((item)=>console.log(item));
+
+    </script>
+  </body>
+</html>
+

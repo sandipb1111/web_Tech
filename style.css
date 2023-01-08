@@ -1,0 +1,164 @@
+* {
+  margin: 0%;
+}
+body {
+  padding: 2rem 7rem;
+}
+legend {
+  margin-inline: auto;
+  font-size: large;
+  font-weight: bolder;
+  color: rgb(64, 37, 42);
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(48, 45, 42);
+  padding: 1rem;
+}
+.nav button {
+  cursor: pointer;
+  border: none;
+}
+.nav a:hover {
+  transform: scale(1.2);
+  transition: 0.9s;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+img {
+  height: 20rem;
+  width: 20rem;
+  margin-inline: auto;
+  border-radius: 8px;
+}
+p {
+  margin-top: 20px;
+}
+.H1 {
+  padding: 10px;
+}
+
+/*Table*/
+.student {
+  width: fit-content;
+  margin-top: 20px;
+  margin-left: 362px;
+}
+.detail {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+table,
+tr,
+th,
+td {
+  border: 2px solid rgba(4, 15, 24, 0.267);
+}
+table {
+  border-collapse: collapse;
+}
+tr :nth-child(odd) {
+  background-color: rgba(4, 15, 24, 0.267);
+}
+.detail th {
+  background-color: rgba(4, 15, 24, 0.267);
+}
+
+/*Video& Audio*/
+.video {
+  width: fit-content;
+  margin-top: 20px;
+  margin-left: 126px;
+}
+
+/*Html form*/
+.form {
+  width: fit-content;
+  background-color: rgba(4, 15, 24, 0.267);
+  margin-top: 40px;
+  margin-left: 292px;
+}
+#studentform label {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.inputClass {
+  padding: 7px;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+/*Select */
+.sel {
+  padding: 10px;
+  margin-right: 60px;
+  gap: 2rem;
+}
+.option {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sel select {
+  padding: 7px;
+  width: 11rem;
+  border-radius: 5px;
+}
+/*Date*/
+.date {
+  padding: 7px;
+  width: 9rem;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/*Check box */
+.check {
+  margin-left: 8px;
+}
+
+/*submit*/
+.submit {
+  display: flex;
+  justify-content: center;
+}
+#sub {
+  background-color: rgb(119, 146, 170);
+}
+
+/* iframe*/
+.iframe {
+  width: fit-content;
+  margin-top: 20px;
+  margin-left: 348px;
+}
+
+/*Section*/
+.sec {
+  height: 50rem;
+  margin-top: 20px;
+}
+#canvas{
+  border: 1px;
+  color: red;
+  
+}
+body{
+  background-color: rgb(152, 172, 167);
+}
+#hye{
+  margin-left: 550px;
+}
+aside#asside{
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+}
+

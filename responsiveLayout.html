@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        .main_wrapper{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 10px;
+        }
+        @media screen and (max-width: 1200px) {
+            .main_wrapper{
+                grid-template-columns: repeat(4,1fr);  
+            }
+        }
+        @media screen and (max-width: 900px) {
+            .main_wrapper{
+                grid-template-columns: repeat(3,1fr);  
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .main_wrapper{
+                grid-template-columns: repeat(2,1fr);  
+            }
+        }
+
+        .card_wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 6px;
+            width: fit-content;
+            overflow: hidden;
+    }
+        .card_content_wrapper{
+        padding: 0 10px 10px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 6px;
+    }
+
+     legend {
+            margin-inline: auto;
+            font-size: large;
+            font-weight: bolder;
+            color: rgb(64, 37, 42);
+}
+        
+     #wrapper{
+            background-color: beige;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+        }
+
+     #textWrapper{
+            display: grid;
+            gap: 10px;
+
+        }
+     @media screen and (max-width: 700px){
+          #wrapper{
+                flex-direction: column;
+            }
+
+        }
+     #imageWrapper{
+
+            width: 100%;
+            height: auto;
+            float: right;
+        }
+     #content{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+        }
+     h1{
+            margin: 0;
+        }
+        .parent-div{
+                height: 50px;
+                position: relative;
+                border: 1px solid #f85606;
+                padding: 16px;
+            }
+            .child-div{
+                position: absolute;
+                border: 1px solid #f85606;
+                right: 5px;
+                bottom: 5px;
+                width: fit-content;
+                padding: 3px;
+            }
+            .button-wrapper{
+                position: relative;
+            }
+            .fixed-btn
+            {
+                position: fixed;
+                background: #f85606;
+                color: #fff;
+                padding: 10px;
+                border:none;
+                bottom: 0;
+                right: 50%;
+                margin: 10px;
+            } .sticky-btn
+            {
+                position: sticky;
+                background: #f85606;
+                color: #fff;
+                padding: 10px;
+                top: 10px;
+                border:none;
+            }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        
+        <div>
+            <img id="imageWrapper" src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg" alt="">
+        </div>
+        <div id="content">
+             <h1>Header</h1>
+             <div id="textWrapper">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Praesentium cupiditate quod soluta culpa consectetur officiis 
+                iusto facere dolorem illo ducimus quae, cumque quos, quisquam 
+                officia perferendis vel eum architecto rem!
+    
+            </div>
+         </div>
+      
+    </div>
+    <fieldset>
+        <legend>Card</legend>
+        <div class="main_wrapper">
+        <div class="card_wrapper">
+            <div class="card_img_wrapper">
+                <img width="100%" height="200" id="card_img" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+            </div>
+            <div class="card_content_wrapper">
+                <p>Hello World...</p>
+            </div>
+        </div>
+
+        <div class="card_wrapper">
+            <div class="card_img_wrapper">
+                <img width="100%" height="200" id="card_img" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+            </div>
+            <div class="card_content_wrapper">
+                <p>Hello World...</p>
+            </div>
+        </div>
+
+        <div class="card_wrapper">
+            <div class="card_img_wrapper">
+                <img width="100%" height="200" id="card_img" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+            </div>
+            <div class="card_content_wrapper">
+                <p>Hello World...</p>
+            </div>
+        </div>
+
+        <div class="card_wrapper">
+            <div class="card_img_wrapper">
+                <img width="100%" height="200" id="card_img" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+            </div>
+            <div class="card_content_wrapper">
+                <p>Hello World...</p>
+            </div>
+        </div>
+
+        <div class="card_wrapper">
+            <div class="card_img_wrapper">
+                <img width="100%" height="200" id="card_img" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+            </div>
+            <div class="card_content_wrapper">
+                <p>Hello World...</p>
+            </div>
+        </div>
+
+        <div class="card_wrapper">
+            <div class="card_img_wrapper">
+                <img width="100%" height="200" id="card_img" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+            </div>
+            <div class="card_content_wrapper">
+                <p>Hello World...</p>
+            </div>
+        </div>
+        <div class="card_wrapper">
+            <div class="card_img_wrapper">
+                <img width="100%" height="200" id="card_img" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+            </div>
+            <div class="card_content_wrapper">
+                <p>Hello World...</p>
+            </div>
+        </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Position in CSS</legend>
+        <div class="parent-div">
+            <button onclick="alert('hello')" class="child-div">
+                Close
+            </button>
+        </div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        <button class="sticky-btn">Sticky button</button>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+ita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus enim voluptate? Accusantium cupiditate et expedita iure molestiae odio pariatur quam veritatis. Cumque laudantium minima quidem quos vitae? Quidem, veritatis?
+        <div class="button-wrapper">
+            <button class="fixed-btn">Click here</button>
+        </div>
+    </fieldset>
+    <script src="responsive.js"></script>
+    
+</body>
+</html>
